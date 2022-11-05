@@ -3,11 +3,14 @@ class Solution:
         left=0
         right =0
         mx=0
+        ans=0
         for right in range(len(nums)):
-            if nums[right] != 1 :
-                left= right + 1
-            mx=max(mx,right - left + 1)
-        return mx
+            if nums[right]==1:
+                mx+=1
+                ans = max(ans,mx)
+            else:
+                mx = 0
+        return ans
             
                 
         0,0,0
