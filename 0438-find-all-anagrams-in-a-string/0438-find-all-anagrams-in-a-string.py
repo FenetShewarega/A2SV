@@ -11,10 +11,7 @@ class Solution:
                     if dic[s[left]] == 0:
                         del dic[s[left]]
                     left += 1
-                if s[right] not in dic:
-                    dic[s[right]] = 1
-                else:
-                    dic[s[right]] += 1
+                dic[s[right]] += 1
                 right += 1
                 if dic == cp:
                     result.append(left)
