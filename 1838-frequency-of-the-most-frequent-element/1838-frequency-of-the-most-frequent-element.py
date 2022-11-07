@@ -9,11 +9,11 @@ class Solution:
             while nums[right] * (right-left+1) > k + ws:
                 ws -= nums[left]
                 left+=1
-            mx =max(mx,right-left+1)
+            if right - left  + 1 > mx :
+                mx =right-left+1
+                hold= nums[right]
         return mx   
             
-                
-       
-
+  
           
             
