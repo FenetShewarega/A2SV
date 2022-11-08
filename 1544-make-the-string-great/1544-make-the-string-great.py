@@ -1,12 +1,10 @@
 class Solution:
     def makeGood(self, s: str) -> str:
-        
-        i=1
-        while i < len(s):
-            if s[i].upper() == s[i-1].upper() and s[i]!= s[i-1]:
-        # print(s)
-                s=s[:i-1]+s[i+1:]
-                i = 1
+        stack = []
+        for i in s:
+            
+            if stack and ((i.upper() == stack[-1] or i.lower() == stack[-1]) and i != stack[-1]):
+                stack.pop()
             else:
-                i+=1
-        return s
+                stack.append(i)
+        return ''.join(stack)      
