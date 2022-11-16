@@ -7,8 +7,10 @@ class Solution:
         for i,j in intervals:
             prefix[i]+=1
             prefix[j + 1]-=1
+        ans = 0
         for x in range(1,len(prefix)):
             prefix[x]+=prefix[x-1]
+            
         return max(prefix)    
         
           
