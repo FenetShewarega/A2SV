@@ -15,16 +15,3 @@ class Solution:
             
         return mn+1 if mn != len(cards)+1 else -1    
     
-#         d={}
-#         x=[]
-#         for i in range(len(cards)):
-#             if cards[i] not in d:
-#                 d[cards[i]]=i
-#             else:
-#                 x.append(i-d[cards[i]])
-#                 d[cards[i]]=i
-#         if len(x)<=0:
-#             return -1
-#         return min(x)+1
-    
-#     [3,4,2,3,6,3,4,7]
